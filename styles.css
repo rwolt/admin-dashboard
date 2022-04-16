@@ -2,6 +2,7 @@
 
 :root {
   --background-color: dodgerblue;
+  --accent-color: coral;
 }
 
 * {
@@ -56,15 +57,6 @@
   gap: 25px;
 }
 
-.header {
-  border: 1px solid #444;
-}
-
-.main-content {
-  grid-row: 2 / 3;
-  border: 1px solid green;
-}
-
 .logo {
   margin-left: 2rem;
   position: relative;
@@ -92,11 +84,10 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 2fr 3fr;
-  margin: 0 3rem;
+  margin: 0 1rem;
 }
 
 .search-bar {
-  border: 1px solid blue;
   display: grid;
   grid-template-columns: 24px 1fr;
   align-items: center;
@@ -104,16 +95,17 @@
   padding: 10px;
 }
 
-.search-input {
-  height: 1rem;
-  background-color: #777;
-  border-radius: 10px;
+#search-input {
+  height: 1.8rem;
+  padding: 0.3rem;
+  border: none;
+  background-color: #e5e5e5;
+  border-radius: 50px;
 }
 
 .auth-buttons {
-  border: 1px solid coral;
   display: grid;
-  gap: 10px;
+  column-gap: 15px;
   grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
   justify-items: end;
@@ -125,7 +117,8 @@
 
 .auth-buttons p {
   font-family: "Poppins", Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.2rem;
   justify-self: start;
 }
 
@@ -135,42 +128,159 @@
 }
 
 .user-info {
-  border: 1px solid red;
   display: grid;
   align-items: center;
   grid-template-columns: 5rem 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  grid-template-rows: 3fr 4fr;
+  column-gap: 10px;
   font-family: "Poppins", Arial, sans-serif;
 }
 
 #profile-picture {
   height: 5rem;
+  padding: 0.5rem;
   border-radius: 50%;
   grid-row: 1 / -1;
 }
 
 #greeting {
   align-self: end;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 #user-name {
   align-self: start;
   font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .interaction-buttons {
-  border: 1px solid limegreen;
-  display: flex;
-  justify-content: space-between;
+  margin-left: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  justify-items: center;
 }
 
 .interaction-buttons button {
-  font-size: 1.3rem;
-  padding: 0.7rem 1rem;
-  border-radius: 20px;
+  font-size: 1.2rem;
+  width: 10ch;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50px;
   border: none;
   background-color: var(--background-color);
   color: white;
+}
+
+.main-content {
+  grid-row: 2 / 3;
+  background-color: #e5e5e5;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  font-family: "Poppins", "Arial", sans-serif;
+}
+
+.projects-header,
+.announcements-header,
+.trending-header {
+  padding: 0.5rem 1rem 0 1rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 1rem;
+}
+
+.project-card {
+  border: 1px solid black;
+  background-color: white;
+  border: none;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-card-buttons {
+  display: grid;
+  grid-template-columns: 24px 24px 24px 1fr;
+  justify-items: end;
+  column-gap: 1.3rem;
+  padding: 0.5rem;
+  direction: rtl;
+}
+
+.feed-sidebar {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.announcements-list,
+.trending-list {
+  display: grid;
+  list-style-type: none;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.announcements-list li {
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.announcements-list li:last-child,
+.trending-list li:last-child {
+  border-bottom: none;
+}
+
+.announcement-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.announcement-description {
+  font-size: 0.9rem;
+}
+
+.trending {
+  display: grid;
+}
+
+.trending-header {
+  align-self: end;
+}
+
+.trending-user {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.user-handle {
+  align-self: end;
+  font-size: 0.9rem;
+}
+
+.user-display-name {
+  align-self: start;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.trending-user img {
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  grid-row: 1 / -1;
 }
