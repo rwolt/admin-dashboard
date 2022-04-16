@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 :root {
-  --background-color: dodgerblue;
-  --accent-color: coral;
+  --background-color: #0c56ff;
+  --accent-color: #fcb203;
+  --paragraph-color: #555;
 }
 
 * {
@@ -84,7 +84,9 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 2fr 3fr;
-  margin: 0 1rem;
+  padding: 0 1rem;
+  box-shadow: 0 5px 10px -10px #333;
+  z-index: 1;
 }
 
 .search-bar {
@@ -209,6 +211,10 @@
   font-weight: 600;
 }
 
+.project-description {
+  color: var(--paragraph-color);
+}
+
 .project-card-buttons {
   display: grid;
   grid-template-columns: 24px 24px 24px 1fr;
@@ -251,6 +257,7 @@
 
 .announcement-description {
   font-size: 0.9rem;
+  color: var(--paragraph-color);
 }
 
 .trending {
@@ -274,7 +281,7 @@
 
 .user-display-name {
   align-self: start;
-  color: #555;
+  color: var(--paragraph-color);
   font-size: 0.9rem;
 }
 
