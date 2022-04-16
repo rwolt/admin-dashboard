@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+:root {
+  --background-color: dodgerblue;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -19,7 +23,7 @@
 }
 
 .sidebar {
-  background-color: dodgerblue;
+  background-color: var(--background-color);
   grid-column-start: 1;
   grid-row: 1 / -1;
   display: grid;
@@ -82,4 +86,91 @@
   content: url(./images/grid.svg);
   position: absolute;
   left: -3.5rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 2fr 3fr;
+  margin: 0 3rem;
+}
+
+.search-bar {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.search-input {
+  height: 1rem;
+  background-color: #777;
+  border-radius: 10px;
+}
+
+.auth-buttons {
+  border: 1px solid coral;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+  justify-items: end;
+}
+
+#notifications-icon {
+  justify-self: end;
+}
+
+.auth-buttons p {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+  justify-self: start;
+}
+
+#auth-profile-picture {
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.user-info {
+  border: 1px solid red;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+#profile-picture {
+  height: 5rem;
+  border-radius: 50%;
+  grid-row: 1 / -1;
+}
+
+#greeting {
+  align-self: end;
+}
+
+#user-name {
+  align-self: start;
+  font-size: 1.4rem;
+}
+
+.interaction-buttons {
+  border: 1px solid limegreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interaction-buttons button {
+  font-size: 1.3rem;
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--background-color);
+  color: white;
 }
