@@ -23,20 +23,15 @@
   grid-column-start: 1;
   grid-row: 1 / -1;
   display: grid;
-  grid-template-rows: 3fr 8fr 10fr 10fr;
+  grid-template-rows: 3fr 11fr 10fr 10fr;
   gap: 10px;
   font-family: "Poppins", "Arail", sans-serif;
-}
-
-.sidebar .logo h1 {
-  font-weight: 600;
-  color: white;
 }
 
 .sidebar > .nav ul,
 .sidebar > .settings ul {
   display: grid;
-  gap: 5px;
+  gap: 15px;
   list-style-type: none;
   font-weight: 600;
   font-size: 1.2rem;
@@ -49,6 +44,14 @@
   color: white;
 }
 
+.nav ul li,
+.settings ul li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 25px;
+}
+
 .header {
   border: 1px solid #444;
 }
@@ -58,15 +61,25 @@
   border: 1px solid green;
 }
 
-.dashboard-icon {
-  color: white;
-}
-
 .logo {
   margin-left: 2rem;
   position: relative;
   display: grid;
-  gap: 5px;
+  gap: 25px;
   grid-template-columns: 24px 1fr;
   align-items: center;
+}
+
+.sidebar .logo h1 {
+  font-weight: 600;
+  color: white;
+  font-size: 1.7rem;
+  grid-column: 2 / 3;
+  position: relative;
+}
+
+.sidebar .logo h1::before {
+  content: url(./images/grid.svg);
+  position: absolute;
+  left: -3.5rem;
 }
