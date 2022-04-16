@@ -1,4 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  width: 80vw;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: dodgerblue;
+  grid-column-start: 1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-rows: 3fr 8fr 10fr 10fr;
+  gap: 10px;
+  font-family: "Poppins", "Arail", sans-serif;
+}
+
+.sidebar .logo h1 {
+  font-weight: 600;
+  color: white;
+}
+
+.sidebar > .nav ul,
+.sidebar > .settings ul {
+  display: grid;
+  gap: 5px;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+}
+
+.nav ul a,
+.settings ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  border: 1px solid #444;
+}
+
+.main-content {
+  grid-row: 2 / 3;
+  border: 1px solid green;
+}
+
+.dashboard-icon {
+  color: white;
+}
+
+.logo {
+  margin-left: 2rem;
+  position: relative;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
 }
